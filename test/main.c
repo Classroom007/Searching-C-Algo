@@ -8,11 +8,17 @@ void print_array(int arr[], int n) {
 }
 
 int main() {
-    int n, target;
-    // Read array size and target for search
-    if (scanf("%d %d", &n, &target) != 2) return 1;
+    int n;
+    // Read array size
+    if (scanf("%d", &n) != 1) return 1;
     int arr[n];
-    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+    // Read n array elements
+    for (int i = 0; i < n; i++) {
+        if (scanf("%d", &arr[i]) != 1) return 1;
+    }
+    int target;
+    // Read target value to search
+    if (scanf("%d", &target) != 1) return 1;
 
     // Test searches
     int idx_lin = linear_search(arr, n, target);
@@ -24,15 +30,18 @@ int main() {
     int temp[n];
     // Bubble sort
     for (int i = 0; i < n; i++) temp[i] = arr[i];
-    bubble_sort(temp, n); print_array(temp, n);
+    bubble_sort(temp, n);
+    print_array(temp, n);
 
     // Selection sort
     for (int i = 0; i < n; i++) temp[i] = arr[i];
-    selection_sort(temp, n); print_array(temp, n);
+    selection_sort(temp, n);
+    print_array(temp, n);
 
     // Insertion sort
     for (int i = 0; i < n; i++) temp[i] = arr[i];
-    insertion_sort(temp, n); print_array(temp, n);
+    insertion_sort(temp, n);
+    print_array(temp, n);
 
     return 0;
 }
