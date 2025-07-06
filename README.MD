@@ -29,4 +29,4 @@ echo -e "5 3 1 2 3 4 5" | ./student_lab    # customize based on driver spec
 - Fill in all `// TODO` sections.
 - Commit and push to your Classroom repo.
 - CI will report pass/fail status based on hidden test cases.
-```
+
